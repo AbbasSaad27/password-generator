@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generate</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/index.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="popup">
+        <div class="password-criterias">
+          <h2 class="block-title">Password Criterias</h2>
+          <form class="criteriaForm">
+            <div class="lengthInput">
+              <label for="inputLength" class="label">Password Length:</label>
+              <input
+                type="number"
+                name="length"
+                id="inputLength"
+                min="8"
+                max="128"
+                placeholder="8-128"
+                required
+              />
+            </div>
+            <div class="lengthInput">
+              <p class="label">Charectar Types:</p>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  name="typeCheckbox"
+                  id="typeCheckbox1"
+                  value="lower"
+                />
+                <label for="typeCheckbox1">Lowercase (a-z)</label>
+              </div>
+
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  name="typeCheckbox"
+                  id="typeCheckbox2"
+                  value="upper"
+                />
+                <label for="typeCheckbox2">Uppercase (A-Z)</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  name="typeCheckbox"
+                  id="typeCheckbox3"
+                  value="number"
+                />
+                <label for="typeCheckbox3">Number (0-9)</label>
+              </div>
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  name="typeCheckbox"
+                  id="typeCheckbox4"
+                  value="special"
+                />
+                <label for="typeCheckbox4">Special Charectar (@!%#)</label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-genConfirm">Generate</button>
+          </form>
+          <button type="button" class="btn btn-close">Close</button>
+        </div>
+      </div>
+      <h1 class="component-title">Password Generator</h1>
+      <section class="generator-container">
+        <h2 class="generator-title">Generate a password</h2>
+        <div class="border-top-bottom">
+          <div class="generator-result">
+            <p class="default-message">Your secured password</p>
+          </div>
+        </div>
+        <button type="button" class="btn btn-gen">Generate password</button>
+      </section>
+    </main>
+  </body>
+</html>
